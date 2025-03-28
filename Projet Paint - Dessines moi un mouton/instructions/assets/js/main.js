@@ -19,6 +19,7 @@ function getSelectedColor()
 }
 
 function loadPalette(palette) {
+    // le code de l'étape 1 se passe ici
     const couleursPalette = document.querySelectorAll("header > div");
     palette.forEach((color, index) => {
         if (couleursPalette[index]) {
@@ -35,9 +36,13 @@ window.addEventListener("DOMContentLoaded", function(){
     ]);
 
     // le code de l'étape 2 se passe ici
-    const couleursPalette = document.querySelectorAll("header > div");
-    couleursPalette.forEach(div => {
-        div.addEventListener("click", selectColor);
+    const couleursPalette = document.querySelectorAll("header input[type='color']");
+    couleursPalette.forEach(input => {
+        input.addEventListener("input", function(event) {
+            let color = event.target.value;
+            sessionStorage.setItem("selectedColor", color);
+            console.log("Couleur sélectionnée via input", color);
+        });
     });
 
     // le code de l'étape 3 se passe ici
