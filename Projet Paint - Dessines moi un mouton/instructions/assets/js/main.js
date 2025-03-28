@@ -28,7 +28,11 @@ function loadPalette(palette) {
 }
 
 window.addEventListener("DOMContentLoaded", function(){
-    loadPalette(["#22f6f3", "#3daf7e", "#ffffff", "#ec8236", "#a9a7ee", "#ecc606", "#f783f2", "#e89e80"]);
+    loadPalette([
+        "#22f6f3", "#3daf7e", "#ffffff", "#ec8236", "#a9a7ee", "#ecc606", 
+        "#f783f2", "#e89e80", "#ff5733", "#33ff57", "#5733ff", "#ff33ff", 
+        "#ff9833", "#33b5ff", "#ff33b5", "#b5ff33"
+    ]);
 
     // le code de l'étape 2 se passe ici
     const couleursPalette = document.querySelectorAll("header > div");
